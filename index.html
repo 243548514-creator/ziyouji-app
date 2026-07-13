@@ -154,7 +154,7 @@ window.FULL_CHARACTER_BANK=[{"char":"的","pinyin":"de","image":"📘","words":[
  let questions=[],qIndex=0,qScore=0,answered=false;
  function shuffle(a){return a.map(v=>[Math.random(),v]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}
  function makeQuestion(item,i){
-   const types=['word','pinyin'];const type=types[i%2];
+   const types=['pinyin'];const type=types[0];
    let pool=data.filter(x=>x.char!==item.char);if(pool.length<3)pool=window.FULL_CHARACTER_BANK.filter(x=>x.char!==item.char);
    if(type==='word'){
      const correct=item.words[0];
